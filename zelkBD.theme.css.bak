@@ -1,19 +1,21 @@
 /**
  * @name Zelk
- * @version 1.2.2
+ * @version 1.2
  * @description a smooth theme inspired by zorin
  * @author schnensch
  * @authorId 652801938374656013
  * @source https://github.com/schnensch0/zelk
  * @invite tMEcBhsNqA
  */
-/*         ▀▀█ █▀▀ █   █ █
-           ▄▀  █▀▀ █   █▀▄
-           ▀▀▀ ▀▀▀ ▀▀▀ ▀ ▀           */
+ /*         ▀▀█ █▀▀ █   █ █
+            ▄▀  █▀▀ █   █▀▄
+            ▀▀▀ ▀▀▀ ▀▀▀ ▀ ▀           */
  /*--------------IMPORTS------------- */
-@import url(https://schnensch0.github.io/zelk/main.css);
+@import url(https://raw.githack.com/schnensch0/zelk/main/main.css);
 @import url(https://discord-custom-covers.github.io/usrbg/dist/usrbg.css);
 @import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css);
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap'); */
 /*--------------COLORS---------------*/
 /*------remove / and * to apply------*/
 /* @import url(https://raw.githack.com/schnensch0/zelk/main/colors/blue.css); */
@@ -22,23 +24,24 @@
 /* @import url(https://raw.githack.com/schnensch0/zelk/main/colors/orange.css); */
 /* @import url(https://raw.githack.com/schnensch0/zelk/main/colors/purple.css); */
 /* @import url(https://raw.githack.com/schnensch0/zelk/main/colors/red.css); */
-/* @import url(https://raw.githack.com/schnensch0/zelk/main/colors/discord.css); */
+
 /*-------------VARIABLES-------------*/
 :root {
   /* set to 'unset' to show */
-  --scrollbars: none;
-  /* user notes */
-  --notes: none;
+  --scrollbars: unset;
+  /* profile notes */
+  --notes: unset;
   /* direct message box */
   --message: none;
-  /* set to '4px solid' to show */
-  --embed-color: none;
   /* set to 'Inter', sans-serif !important to use Inter font*/
-  --font-primary: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-display: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+
+  --font-primary: 'Karla', sans-serif;
+	--font-display: var(--font-primary) !important;
+
   --border-radius-1: 10px;
   --border-radius-2: 8px;
 }
+
 /*-----------CUSTOM COLORS-----------*/
 /*-------------DARK MODE-------------*/
 /*---------------BASIC---------------*/
@@ -49,14 +52,6 @@
   --background-2: #181d20;
   --background-accent: #1e2529;
   --border-color: #273034;
-}
-/*-------------LIGHT MODE------------*/
-.theme-light {
-  --accent-color: #22c5fd;
-  --background-1: #ffffff;
-  --background-2: #f5f7fa;
-  --background-accent: var(--background-2);
-  --border-color: transparent;
 }
 /*-------------ADVANCED--------------*/
 .theme-dark {
@@ -70,6 +65,7 @@
   --background-floating: var(--background-1);
   --background-mentioned: #bde6fb10;
   --background-mentioned-hover: #bde6fb15;
+  --channeltextarea-background: #bde6fb15;
   /* modifiers */
   --background-modifier-hover: #262e33;
   --background-modifier-active: #495a63;
@@ -79,10 +75,10 @@
   /* text */
   --text-normal: var(--text-normal-color);
   --text-positive: var(--text-normal);
-  --text-muted: #6d8692;
-  --text-link: #edf8fe;
+  --text-muted: #839fad;
+  --text-link: var(--accent-color);
   --interactive-selected: var(--background-primary);
-  --interactive-active: var(--text-normal);
+  --interactive-active: var(--accent-color);
   --interactive-normal: var(--text-normal);
   --interactive-muted: var(--button-background-active);
   --channels-default: var(--text-muted);
@@ -107,6 +103,17 @@
   --button-destructive-hover: #ff929b;
   --button-destructive-active: #fa4a4a;
 }
+
+/*-------------LIGHT MODE------------*/
+/*---------------BASIC---------------*/
+.theme-light {
+  --accent-color: #22c5fd;
+  --background-1: #ffffff;
+  --background-2: #f5f7fa;
+  --background-accent: var(--background-2);
+  --border-color: transparent;
+}
+/*-------------ADVANCED--------------*/
 .theme-light {
   /* background */
   --background-primary: var(--background-1);
@@ -155,16 +162,18 @@
   --button-destructive-hover: #ff929b;
   --button-destructive-active: #fa4a4a;
 }
+
 /*-----------DON'T CHANGE------------*/
-:root {
-  --outdated-122: none !important;
-}
+:root{--outdated:none!important}
 /*  usrbg | snippet by _david_#0218  */
-.userPopout-2j1gM4[style*="--user-background"] .banner-1YaD3N, .root-8LYsGj[style*="--user-background"] .banner-1YaD3N {
+.userPopout-xaxa6l[style*="--user-background"] .banner-2QYc2d, .root-3QyAh1[style*="--user-background"] .banner-2QYc2d {
   height: 120px;
   background: var(--background-tertiary) var(--user-background) var(--user-popout-position, center) center / cover !important;
 }
-.root-8LYsGj[style*="--user-background"] .banner-1YaD3N {
+.userPopout-xaxa6l[style*="--user-background"] .avatarPositionNormal-aZjAsn {
+  top: 76px;
+}
+.root-3QyAh1[style*="--user-background"] .banner-2QYc2d {
   height: 240px;
 }
 
@@ -181,6 +190,18 @@
   border-left: medium solid;
 }
 
-.wrapper-3kah-n.selected-1Drb7Z .childWrapper-1j_1ub, .interactiveSelected-29CP8y {
-  background-color: var(--accent-color) !important;
+.headerTagUsernameNoNickname-1TjuLc {
+  color: var(--text-normal-color)
+}
+
+.modeConnected-NrO4cP .name-28HaxV, .modeConnected-NrO4cP:hover .name-28HaxV, .modeSelected-3DmyhH .name-28HaxV, .modeSelected-3DmyhH:hover .name-28HaxV, .modeUnread-3Cxepe .name-28HaxV, .modeUnread-3Cxepe:hover .name-28HaxV, .notInteractive-2tFrlE.modeConnected-NrO4cP .name-28HaxV, .notInteractive-2tFrlE.modeSelected-3DmyhH .name-28HaxV {
+  color: var(--text-normal-color)
+}
+
+.theme-dark .scroller-2GkvCq {
+  background: var(--background-secondary);
+}
+
+.theme-dark .container-KM8BU6, .theme-dark .reactors-1VXca7 {
+  background-color : var(--background-primary);
 }
