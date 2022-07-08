@@ -14,6 +14,7 @@
 @import url(https://schnensch0.github.io/zelk/main.css);
 @import url(https://discord-custom-covers.github.io/usrbg/dist/usrbg.css);
 @import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/SettingsIcons.css);
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&display=swap');
 /*--------------COLORS---------------*/
 /*------remove / and * to apply------*/
 /* @import url(https://raw.githack.com/schnensch0/zelk/main/colors/blue.css); */
@@ -26,16 +27,16 @@
 /*-------------VARIABLES-------------*/
 :root {
   /* set to 'unset' to show */
-  --scrollbars: none;
+  --scrollbars: unset;
   /* user notes */
-  --notes: none;
+  --notes: unset;
   /* direct message box */
-  --message: none;
+  --message: unset;
   /* set to '4px solid' to show */
-  --embed-color: none;
+  --embed-color: 4px solid;
   /* set to 'Inter', sans-serif !important to use Inter font*/
-  --font-primary: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-display: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  --font-primary: Karla, Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: Karla, Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   --border-radius-1: 10px;
   --border-radius-2: 8px;
 }
@@ -80,7 +81,7 @@
   --text-normal: var(--text-normal-color);
   --text-positive: var(--text-normal);
   --text-muted: #6d8692;
-  --text-link: #edf8fe;
+  --text-link: var(--accent-color);
   --interactive-selected: var(--background-primary);
   --interactive-active: var(--text-normal);
   --interactive-normal: var(--text-normal);
@@ -176,11 +177,21 @@
   color: var(--accent-color);
 }
 
-.embedFull-1HGV2S {
-  border-radius: 4px;
-  border-left: medium solid;
-}
-
 .wrapper-3kah-n.selected-1Drb7Z .childWrapper-1j_1ub, .interactiveSelected-29CP8y {
   background-color: var(--accent-color) !important;
 }
+
+.headerTop-3GPUSF {
+  flex-direction: row;
+}
+
+.roleCircle-1EgnFN::before {
+  display: none;
+}
+/* Code blocks */
+.hljs {
+    background-color: var(--background-tertiary) !important;
+    color: #839496;
+    position: relative;
+}
+    
