@@ -194,4 +194,46 @@
     color: #839496;
     position: relative;
 }
+
+.contentColumn-1C7as6 {
+    max-width: unset;
+}
+
+.tabBarItem-MeqDhW {
+  padding: 0px 10px 0px 10px;
+  line-height: 2;
+  border-radius: var(--border-radius-2);
+}
+
+/* profile card */
+.profileBanner-2zIsK7 {
+  height : 125px;
+}
+.avatar-3QF_VA {
+    top: -70px;
+    border-color: var(--background-secondary);
+}
+.header-S26rhB {
+  padding-bottom: 2.5rem;
+}
+
+/* member list */
+.member-48YF_l, .members-3WRCEx {
+  background-color: unset;
+}
+
+/* app directory */
+.theme-dark .directoryModal-YJsOMv {
+  background-color: unset;
+}
+themed-2-lozF.selected-g-kMVV.item-3XjbnG, 
+.top-K_jibn .item-3XjbnG[aria-selected="true"] {
+    padding: 2px 16px 2px 16px;
+    border-radius: var(--border-radius-2);
+}
+
+.sidebar-nqHbhN .themed-2-lozF.selected-g-kMVV.item-3XjbnG, 
+.sidebar-nqHbhN .top-K_jibn .item-3XjbnG[aria-selected="true"] {
+  padding: 6px 10px 6px 10px;
+}
     
